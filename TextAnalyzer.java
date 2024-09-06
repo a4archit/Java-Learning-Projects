@@ -7,9 +7,10 @@ public class TextAnalyzer {
         // taking string from user
         System.out.print("Enter some text: ");
         String s = sc.nextLine();
-        System.out.println(s.split(".").length);
+        
         int words = getWords(s);
         int noOfSentences = noOfSentences(s);
+        //displying the output
         System.out.println("\n\tSome Insights: \n\t--------------\n");
         System.out.println("\tTotal words: " + words);
         System.out.println("\tTotal Sentences: "+noOfSentences+"\n\n");
