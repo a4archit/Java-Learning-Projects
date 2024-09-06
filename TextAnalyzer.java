@@ -7,14 +7,29 @@ public class TextAnalyzer {
         // taking string from user
         System.out.print("Enter some text: ");
         String s = sc.nextLine();
+        System.out.println(s.split(".").length);
         int words = getWords(s);
-        System.out.println("Total words: " + words);
+        int noOfSentences = noOfSentences(s);
+        System.out.println("\n\tSome Insights: \n\t--------------\n");
+        System.out.println("\tTotal words: " + words);
+        System.out.println("\tTotal Sentences: "+noOfSentences+"\n\n");
     }
     
     public static int getWords(String text){
         int words;
         words = text.trim().split(" ").length;
         return words;
+    }
+
+    public static int noOfSentences(String s){
+        String[] sa = s.split("[.!?]+");
+        int no = 0;
+        for(String sentence: sa){
+            if (!sentence.trim().isEmpty()){
+                no++;
+            }
+        }
+        return no;
     }
     
 }
