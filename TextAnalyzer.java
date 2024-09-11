@@ -10,7 +10,7 @@ public class TextAnalyzer {
         
         int words = lengthOfText(s);
         int noOfSentences = noOfSentences(s);
-        String lWord = largestWord(s);
+        String lWord = getLargestWord(s);
         
         //displying the output
         System.out.println("\n\tSome Insights: \n\t--------------\n");
