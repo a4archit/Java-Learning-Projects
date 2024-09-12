@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TextAnalyzer {
+class TextAnalyser {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class TextAnalyzer {
         int words = lengthOfText(s);
         int noOfSentences = noOfSentences(s);
         String lWord = getLargestWord(s);
-        String sWord = getSmallWord(s);
+        String sWord = getSmallestWord(s);
         
         //displying the output
         System.out.println("\n\tSome Insights: \n\t--------------\n");
@@ -21,12 +21,12 @@ public class TextAnalyzer {
         System.out.println("\tSmallest word  : "+sWord);
         
     }
-    public static String getLargestWord(String text){
+    public static String getSmallestWord(String text){
     	// This method will return the smallest word from given text 
         String words[] = text.trim().split(" ");
         String smallestWord = words[0];
         for (String word: words){
-            if (smallestWord.length() < word.length()){
+            if (smallestWord.length() > word.length()){
                 smallestWord = word;
             }
         }
@@ -45,6 +45,7 @@ public class TextAnalyzer {
     }
     
     public static int lengthOfText(String text){
+        // returns the length of given text
         int words;
         words = text.trim().split(" ").length;
         return words;
