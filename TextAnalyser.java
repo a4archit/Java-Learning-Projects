@@ -26,9 +26,10 @@ class TextAnalyser {
         System.out.println("\tVowel insights : ");
         System.out.println("\t\tTotal  : "+totalVowels);
         for(int i=0; i<vowels.length; i++){
-            System.out.println("\t\t"+vowels[i]+"-> "+vowelCounts[i]);
-        }
-        
+			if (vowelCounts != 0){
+            	System.out.println("\t\t"+vowels[i]+"-> "+vowelCounts[i]);
+			}
+		}
     }
     
 	public static int getTotalVowels(String text){
