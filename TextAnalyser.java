@@ -15,16 +15,20 @@ class TextAnalyser {
         char vowels[] = "aeiou".toCharArray();
         int totalVowels = getTotalVowels(s);
         int vowelCounts[] = getVowelCounts(s);
+		int totalWhiteSpaces = getWhiteSpacesCounts(s);
+		int totalCharacters = getTotalCharactersCount(s);
         
         
         //displying the output
-        System.out.println("\n\tSome Insights: \n\t--------------\n");
-        System.out.println("\tTotal words    : " + words);
-        System.out.println("\tTotal Sentences: "+noOfSentences);
-        System.out.println("\tLargest word   : "+lWord);
-        System.out.println("\tSmallest word  : "+sWord);
-        System.out.println("\tVowel insights : ");
-        System.out.println("\t\tTotal  : "+totalVowels);
+        System.out.println("\n\tSome Insights : \n\t--------------\n");
+        System.out.println("\tTotal words     : " + words);
+        System.out.println("\tTotal Sentences : "+noOfSentences);
+        System.out.println("\tLargest word    : "+lWord);
+        System.out.println("\tSmallest word   : "+sWord);
+		System.out.println("\tTotal spaces    : "+totalWhiteSpaces);
+		System.out.println("\tTotal Characters: "+totalCharactersCount);
+        System.out.println("\tVowel insights  : ");
+        System.out.println("\t\tTotal   : "+totalVowels);
         for(int i=0; i<vowels.length; i++){
 			if (vowelCounts != 0){
             	System.out.println("\t\t"+vowels[i]+"-> "+vowelCounts[i]);
@@ -41,6 +45,23 @@ class TextAnalyser {
             total += value;
         }
         return total;
+    }
+
+	public static int getWhiteSpacesCount(String text){
+        // returns the total number of white spaces
+        int counts = 0;
+        char textArr[] = text.toCharArray();
+        for (char c: textArr){
+            if (c == ' '){
+                counts++;
+            }
+        }
+        return counts;
+    }
+    
+    public static int getTotalCharactersCounts(String text){
+        // returns the total number of characters in text
+        return text.toCharArray().length;
     }
     
     public static int[] getVowelCounts(String text){
