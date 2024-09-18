@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 
-class Sin {
+class StudentDatabaseSystem {
 
     Scanner sc = new Scanner(System.in);
 
