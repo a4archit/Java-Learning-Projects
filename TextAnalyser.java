@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// main class
 class TextAnalyser {
     
     public static void main(String[] args) {
