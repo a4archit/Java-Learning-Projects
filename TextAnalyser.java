@@ -27,14 +27,15 @@ class TextAnalyser {
         System.out.println("\tLargest word    : "+lWord);
         System.out.println("\tSmallest word   : "+sWord);
 		System.out.println("\tTotal spaces    : "+totalWhiteSpaces);
-		System.out.println("\tTotal Characters: "+totalCharactersCount);
+		System.out.println("\tTotal Characters: "+totalCharacters);
         System.out.println("\tVowel insights  : ");
         System.out.println("\t\tTotal   : "+totalVowels);
         for(int i=0; i<vowels.length; i++){
-			if (vowelCounts != 0){
-            	System.out.println("\t\t"+vowels[i]+"-> "+vowelCounts[i]);
+			if (vowelCounts[i] != 0){
+            System.out.println("\t\t"+vowels[i]+"-> "+vowelCounts[i]);
 			}
 		}
+        sc.close();
     }
     
 	public static int getTotalVowels(String text){
@@ -48,7 +49,7 @@ class TextAnalyser {
         return total;
     }
 
-	public static int getWhiteSpacesCount(String text){
+	public static int getWhiteSpacesCounts(String text){
         // returns the total number of white spaces
         int counts = 0;
         char textArr[] = text.toCharArray();
@@ -60,7 +61,7 @@ class TextAnalyser {
         return counts;
     }
     
-    public static int getTotalCharactersCounts(String text){
+    public static int getTotalCharactersCount(String text){
         // returns the total number of characters in text
         return text.toCharArray().length;
     }
@@ -148,5 +149,7 @@ class TextAnalyser {
         }
         return no;
     }
+
+    
     
 }
