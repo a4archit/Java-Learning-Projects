@@ -30,7 +30,7 @@ class TextAnalyser {
         System.out.println("\tSmallest word   : "+sWord);
 		System.out.println("\tTotal spaces    : "+totalWhiteSpaces);
 		System.out.println("\tTotal Characters: "+totalCharacters);
-        System.out.println("\n\tVowel insights  : ");
+        System.out.println("\n\tVowel insights   ");
         System.out.println("\t\tTotal   : "+totalVowels);
         for(int i=0; i<vowels.length; i++){
 			if (vowelCounts[i] != 0){
