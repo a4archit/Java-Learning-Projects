@@ -8,6 +8,8 @@ class TextAnalyser {
         // taking string from user
         System.out.print("Enter some text: ");
         String s = sc.nextLine();
+	    // closing user input using Scanner class
+        sc.close();
         
         int noOfParagraph = noOfParagraph(s);
         int words = lengthOfText(s);
@@ -27,17 +29,16 @@ class TextAnalyser {
         System.out.println("\tTotal words     : "+words);
         System.out.println("\tTotal Sentences : "+noOfSentences);
         System.out.println("\tLargest word    : "+lWord);
-        System.out.println("\tSmallest word   : "+sWord);
+		System.out.println("\tSmallest word   : "+sWord);
 		System.out.println("\tTotal spaces    : "+totalWhiteSpaces);
 		System.out.println("\tTotal Characters: "+totalCharacters);
         System.out.println("\n\tVowel insights   ");
         System.out.println("\t\tTotal   : "+totalVowels);
         for(int i=0; i<vowels.length; i++){
 			if (vowelCounts[i] != 0){
-            System.out.println("\t\t   | "+vowels[i]+"  : "+vowelCounts[i]);
+            	System.out.println("\t\t   | "+vowels[i]+"  : "+vowelCounts[i]);
 			}
 		}
-        sc.close();
 
         System.out.println();
     }
